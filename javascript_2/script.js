@@ -54,3 +54,46 @@ newAttr.value = "customData";
 imgTag.setAttributeNode(newAttr);
 
 document.getElementsById("demo").style.fontSize = "20px";
+document.getElementById("demo"). innerText = "Hello World!";
+
+document.getElementsByClassName("example-class")[0].style.color = "blue";
+
+
+
+document.getElementById("demo").style.fontSize = "20px"; 
+document.getElementById("clickButton").onclick = function () {
+    alert("Button clicked!");
+    } ;
+    let timer;
+
+    function initialize() {
+        const dynamicText = document.getElementById('dynamicText');
+        dynamicText.innerText = "Timer is not running.";
+    }
+    
+    document.getElementById('changeStyleBtn').onclick = function() {
+        const title = document.getElementById('main-title');
+        title.style.color = 'red';
+        title.style.fontSize = '2em';
+        title.setAttribute('data-changed', 'true'); // Adding new attribute
+    };
+    
+    function highlightText() {
+        const description = document.querySelector('.description');
+        description.classList.toggle('highlight'); // Add/Remove highlight on mouse over
+    }
+    
+    document.getElementById('startTimerBtn').onclick = function() {
+        clearInterval(timer); // Clear any existing timers
+        let count = 0;
+        timer = setInterval(() => {
+            count++;
+            document.getElementById('dynamicText').innerText = `Timer running: ${count} seconds`;
+        }, 1000);
+    };
+    
+    document.getElementById('stopTimerBtn').onclick = function() {
+        clearInterval(timer);
+        document.getElementById('dynamicText').innerText = "Timer is stopped.";
+    };
+    

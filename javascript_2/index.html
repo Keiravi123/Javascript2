@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet">
     <title>JavaScript demo</title>
+    <link href="styles.css" rel="stylesheet">
+    
 
    
 </head>
-<body>
-   
-    <p class="colorize">This is some information.</p>
-    <p id="specialParagraph">colorize</p>
+<body onload="initialize()">
+     <h1 id="main-title">Hi!!!!!!</h1>
+     <button id="changeStyleBtn">Change Title Style</button>
+     <div class="content" onmouseover="highlightText()">
+    <p class="description">This is some information.</p>
+    <p id="dynamicText">colorize</p>
+    </div>
+    <button id="startTimerBtn">Start Timer</button>
+    <button id="stopTimerBtn">Stop Timer</button>
     <div id="demo"></div>
     <title>Ejemplo de ClassName</title>
     <style>
@@ -20,8 +26,7 @@
             font-size: 20px;
         }
     </style>
-    <p>Colorize</p>
-    <button id="change-style">Change-style</button>
+   
    
     <script src="script.js"></script>
 </body>
