@@ -5,31 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript demo</title>
     <link href="styles.css" rel="stylesheet">
-    
-
-   
 </head>
 <body onload="initialize()">
-     <h1 id="main-title">Hi!!!!!!</h1>
-     <button id="changeStyleBtn">Change Title Style</button>
-     <div class="content" onmouseover="highlightText()">
-   <ul> 
-    <li><a href="Tommy.html">Tommy</a></li>
-    </ul>
+    <h1 id="main-title" class="example-class">Hi!!!!!!</h1>  <!-- Added class here -->
+    <button id="changeStyleBtn">Change Title Style</button>
+    <div class="content" onmouseover="highlightText()">
+        <ul> 
+            <li><a href="Tommy.html">Tommy</a></li>
+        </ul>
         <p class="description">This is some information.</p>
-    <p id="dynamicText">colorize</p>
+        <p id="dynamicText">colorize</p>
     </div>
     <button id="startTimerBtn">Start Timer</button>
     <button id="stopTimerBtn">Stop Timer</button>
     <div id="demo"></div>
+    <button id="clickButton">Click me</button>
     <title>Ejemplo de ClassName</title>
     <style>
         .mi-clase {
             color: blue;
             font-size: 20px;
         }
+        .highlight {
+            background-color:pink;
+        }
     </style>
-   
    
     <script src="script.js"></script>
 </body>
