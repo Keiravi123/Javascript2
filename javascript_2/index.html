@@ -3,34 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript demo</title>
+    <title>Sweet Planner</title>
     <link href="styles.css" rel="stylesheet">
 </head>
 <body onload="initialize()">
-    <h1 id="main-title" class="example-class">Hi!!!!!!</h1>  <!-- Added class here -->
-    <button id="changeStyleBtn">Change Title Style</button>
-    <div class="content" onmouseover="highlightText()">
-        <ul> 
-            <li><a href="Tommy.html">Tommy</a></li>
-        </ul>
-        <p class="description">This is some information.</p>
-        <p id="dynamicText">colorize</p>
+    <h1 id="main-title" class="example-class">
+        <i>｡･:*˚:✧｡｡･:*˚:✧｡˚ ༘♡ ⋆｡˚My planner!!!˚ ༘♡ ⋆｡˚｡･:*˚:✧｡｡･:*˚:✧｡</i>
+    
+    <button id="changeStyleBtn">Press me!!!😸</button>
+</h1>
+    <div>
+        <nav class="nav1">
+            <ul>
+                <li><a href="Tommy.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </div>
+    <div class="content" onmouseover="highlightText()">        
+        <ul>              
+            <li><a href="Tommy.html">Tommy</a></li>         
+        </ul>       
+        <p class="description">This is some information.</p>
+        <p id="dynamicText">colorize</p>     
+    </div>   
+    
     <button id="startTimerBtn">Start Timer</button>
-    <button id="stopTimerBtn">Stop Timer</button>
+    <button id="stopTimerBtn">Stop Timer</button> 
     <div id="demo"></div>
-    <button id="clickButton">Click me</button>
-    <title>Ejemplo de ClassName</title>
+    <button id="clickButton">Click me</button>    
+
+    <!-- Estilos CSS -->
     <style>
-        .mi-clase {
-            color: blue;
-            font-size: 20px;
-        }
+        .mi-clase { 
+            color: blue;    
+            font-size: 20px;         
+        }        
         .highlight {
-            background-color:pink;
+            background-color: pink;         
         }
     </style>
-   
+
+    <!-- Código JavaScript para cambiar el color del título -->
+    <script>
+        
+
+        // Función para cambiar el color del título cada vez que se hace clic
+        document.getElementById('changeStyleBtn').onclick = function() {
+            const title = document.getElementById('main-title');
+            if (title) {
+                // Escoger un color aleatorio del array
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                title.style.color = randomColor;  // Cambiar color del título
+                title.style.fontSize = '2em';  // Ajustar el tamaño del texto
+            }
+        };
+    </script>
+
+    <!-- Código adicional de tu archivo JavaScript -->
     <script src="script.js"></script>
+
 </body>
 </html>

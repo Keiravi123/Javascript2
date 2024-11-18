@@ -1,10 +1,40 @@
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
     background-color: #ffdfdffb;
     text-align: center;
 }
+.nav1{
+    background-color: #d9cafe;
+    text-align: center;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px #000000;
+  }
+  .nav1 ul li a{
+      list-style: none;
+    ;
+    display: inlline-block;
+    padding: 13px 35px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    cursor: pointer;
+  }
 
+.nav1_links{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  ul{
+    list-style-type: none;
+     justify-content:center;
+    
+    display: flex;
+  }
 h1 {
     color: #333;
 }
@@ -25,7 +55,7 @@ button {
 }
 
 h1 {
-    color: rgb(250, 132, 152) ;
+    color:rgb(255, 169, 210);
 }
 button {
     margin: 10px 0;

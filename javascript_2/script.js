@@ -1,5 +1,5 @@
 // Basic greeting alert
-alert("Hello!");
+alert("Welcome to SweetPlanner! 😊💗                                                                                                                               We are so excited to have you here! This space is designed to help you plan, organize, and bring your dreams and goals to life. 🌟");
 
 // Constants for login attempts
 const MAX_LOGIN_ATTEMPTS = 3;
@@ -89,13 +89,17 @@ function initialize() {
     }
 }
 
-// Change the title style when the button is clicked
+// Crear un array de colores
+const colors = ["red", "blue", "green", "purple", "orange", "pink", "yellow", "teal", "lime", "brown", "black", "white"];
+
+// Función para cambiar el color del título cada vez que se hace clic
 document.getElementById('changeStyleBtn').onclick = function() {
     const title = document.getElementById('main-title');
     if (title) {
-        title.style.color = 'red';
-        title.style.fontSize = '2em';
-        title.setAttribute('data-changed', 'true');  // Adding new attribute
+        // Escoger un color aleatorio del array
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        title.style.color = randomColor;  // Cambiar color del título
+        title.style.fontSize = '2em';  // Ajustar el tamaño del texto
     }
 };
 
