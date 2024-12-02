@@ -1,14 +1,29 @@
- import "../Card.css"; 
-
-function Card({Name, Work }){
+function Heading() {
+    return <h1>My favorite cat</h1>;
+}
+function Card(props) {
     return (
-        <div className="card">
-            <img src="https://www.google.com/imgres?q=cat&imgurl=https%3A%2F%2Fwww.wfla.com%2Fwp-content%2Fuploads%2Fsites%2F71%2F2023%2F05%2FGettyImages-1389862392.jpg%3Fstrip%3D1&imgrefurl=https%3A%2F%2Fwww.wfla.com%2Fbloom-tampa-bay%2F10-surprising-benefits-of-having-a-cat-in-your-life%2F&docid=VgGX1b8PEJ1vRM&tbnid=gGOGUorT70piqM&vet=12ahUKEwjFsfHggOyJAxXghIkEHYe4KB0QM3oECHoQAA..i&w=7373&h=4916&hcb=2&ved=2ahUKEwjFsfHggOyJAxXghIkEHYe4KB0QM3oECHoQAA"
-            width="200pxs"/>
-        <h1>{Name}</h1>
-        <p>{Work} </p>
-        </div>
+    <div classname="imagemy-style">
+       {}
+       <h2>{props.name}</h2>
+       <img src={props.img} alt="avatar_img"  />
+      <p>{props.tel}</p>
+      <p>{props.email}</p>
+    </div>
     );
 }
-
-export default Card;
+import Gallery from './Galery';
+function Card ({ Name, Work}) {
+return (
+    <div className="card">
+        <img
+        src= "https://www.google.com/imgres?q=cute%20cats&imgurl=https%3A%2F%2Flookaside.instagram.com%2Fseo%2Fgoogle_widget%2Fcrawler%2F%3Fmedia_id%3D3427186451961416054&imgrefurl=https%3A%2F%2Fwww.instagram.com%2Fkittens.hub%2Fp%2FC-Pz-0_sCPG%2F&docid=AW9waoYEB-7x7M&tbnid=mipbcmzTXcfxTM&vet=12ahUKEwjsj6HalYqKAxXNlIkEHTMpGnUQM3oECGUQAA..i&w=1440&h=1800&hcb=2&ved=2ahUKEwjsj6HalYqKAxXNlIkEHTMpGnUQM3oECGUQAA"
+        width="200px"
+        />
+        <h1>{Name}</h1>
+        <p>{Work}</p>
+    </div>
+);
+}
+ezxport default Card;
+<img className="avatar"/>
