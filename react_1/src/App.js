@@ -1,33 +1,16 @@
-// Saludo.js
-import React from 'react';
+import "./styles.css";
+import Card from "./Components/Card";
 
-const Saludo = ({ nombre }) => {
-  return <h1>¡Hola, {nombre}! Bienvenido a mi aplicación React.</h1>;
-};
+export default function App() {
+  const name = "Camila"; 
 
-export default Saludo;
-
-// Informacion.js
-import React from 'react';
-
-const Informacion = ({ detalle }) => {
-  return <p>{detalle}</p>;
-};
-
-export default Informacion;
-
-// App.js (Componente principal)
-import React from 'react';
-import Saludo from './Saludo';  
-import Informacion from './Informacion';
-
-const App = () => {
   return (
-    <div>
-      <Saludo nombre="Juan" />
-      <Informacion detalle="Esta es una aplicación sencilla en React." />
+    <div className="App">
+  
+      <Card Name={name} Work="Doctor"/>
+      <Card Name="Keira" Work="secretary" pics />
+      <Card Name="Korina" Work="leader" />
+      <Card Name="Axel" Work="student" />
     </div>
   );
-};
-
-export default App;
+}
