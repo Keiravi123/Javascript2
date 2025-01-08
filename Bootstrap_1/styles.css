@@ -1,0 +1,14 @@
+.col {
+    border : solid black 2px;
+
+}
+
+.row{
+    background-color: lightpink;
+    border: solid black 2px;
+
+}
+
+body {
+    color: white
+}
