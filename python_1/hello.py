@@ -1,24 +1,29 @@
-def calculate_average(number_list):
-    """
-    This function takes a list of numbers and returns the average.
-    """
-    total_sum = sum(number_list)  
-    number_count = len(number_list)  
-    average = total_sum / number_count  
-    return average
+def calculate_average_rating(ratings):
+    average_rating = sum(ratings) / len(ratings)
+    return average_rating
 
+def does_cat_like_flavor(average_rating):
+    if average_rating >= 6:
+        return True
+    else:
+        return False
 
-numbers = [10, 20, 30, 40, 50]
+def display_message(likes_flavor):
+    if likes_flavor:
+        print("The cat loves the ice cream flavor!")
+    else:
+        print("The cat doesn't like the ice cream flavor...")
 
+ice_cream_ratings = [8, 7, 9, 5, 6]
 
-average_of_numbers = calculate_average(numbers)
-print(f"The average of the list is: {average_of_numbers}")
+average_ice_cream_rating = calculate_average_rating(ice_cream_ratings)
 
-if average_of_numbers > 30:
-    print("The average is high.")
-else:
-    print("The average is low.")
+cat_likes_flavor = does_cat_like_flavor(average_ice_cream_rating)
 
-print("Numbers multiplied by 2:")
-for number in numbers:
-    print(number * 2)
+display_message(cat_likes_flavor)
+
+for rating in ice_cream_ratings:
+    if rating >= 7:
+        print(f"This flavor with a rating of {rating} is liked by the cat.")
+    else:
+        print(f"This flavor with a rating of {rating} is not liked by the cat.")
